@@ -26,7 +26,7 @@ final class MarketTabViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.model.coins.removeAll()
                 for coin in coins?[0...30] ?? [] {
-                    self.model.coins.append(SingleCoin(image: coin.iconUrl ?? "", name: coin.name ?? "", symbol: coin.symbol ?? "", price: (coin.price! as NSString).doubleValue, percentage: (coin.change! as NSString).doubleValue, color: Color(hex: coin.color ?? "")))
+                    self.model.coins.append(SingleCoin(image: coin.iconUrl ?? "", name: coin.name ?? "", symbol: coin.symbol ?? "", price: (coin.price! as NSString).doubleValue, percentage: (coin.change! as NSString).doubleValue, color: Color(hex: coin.color ?? ""), marketCap: coin.marketCap ?? ""))
                 }
             }
         } catch {

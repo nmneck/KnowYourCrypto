@@ -16,4 +16,5 @@ struct SingleCoin: Identifiable {
     let price: Double
     let percentage: Double
     let color: Color
+    let marketCap: String
 }

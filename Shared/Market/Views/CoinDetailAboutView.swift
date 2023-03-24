@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CoinDetailAboutView: View {
+    
+    //will add it ro a dict or arr or model later
+    let marrketCap: String
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -17,7 +21,7 @@ struct CoinDetailAboutView: View {
                     
                     Spacer()
                     
-                    CustomSizeTextButtonView(text: "₹2364764752", color: Color("AccentColor"))
+                    CustomSizeTextButtonView(text: "₹\(marrketCap)", color: Color("AccentColor"))
                 }
                 .padding(.horizontal)
                 
@@ -71,6 +75,6 @@ struct CoinDetailAboutView: View {
 
 struct CoinDetailAboutView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinDetailAboutView()
+        CoinDetailAboutView(marrketCap: "")
     }
 }

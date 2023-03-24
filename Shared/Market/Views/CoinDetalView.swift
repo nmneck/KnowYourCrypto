@@ -98,7 +98,7 @@ struct CoinDetalView: View {
             .padding()
             
             TabView(selection: $tabData.itemSelected) {
-                CoinDetailAboutView()
+                CoinDetailAboutView(marrketCap: coin.marketCap)
                     .tag(1)
                 
                 CoinDetailMarketsView()
@@ -115,7 +115,7 @@ struct CoinDetalView: View {
 
 struct CoinDetalView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinDetalView(coin: SingleCoin(image: "", name: "", symbol: "", price: 0, percentage: 0, color: .mint))
+        CoinDetalView(coin: SingleCoin(image: "", name: "", symbol: "", price: 0, percentage: 0, color: .mint, marketCap: ""))
             
     }
 }
